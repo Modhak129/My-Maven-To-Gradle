@@ -1,20 +1,19 @@
 apply plugin: 'java'
-apply plugin: 'maven'
+apply plugin: 'application'
 
 group = 'com.example'
 version = '1.0-SNAPSHOT'
+description = "MyMavenToGradle"
 
-description = """MyMavenToGradle"""
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
-
-
+mainClassName = 'com.example.App'
 
 repositories {
-        
-     maven { url "https://repo.maven.apache.org/maven2" }
+    mavenCentral()
 }
+
 dependencies {
-    testCompile group: 'junit', name: 'junit', version:'3.8.1'
+    testCompile 'junit:junit:4.12'
 }
